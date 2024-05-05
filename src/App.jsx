@@ -27,7 +27,7 @@ function deriveActivePlayer(gameTurns) {
   return currentPlayer;
 }
 
-function deriveGameBoard({ gameTurns }) {
+function deriveGameBoard(gameTurns) {
   let gameBoard = [...INITIAL_GAME_BOARD.map((arr) => [...arr])];
 
   for (const turn of gameTurns) {
@@ -42,7 +42,7 @@ function deriveGameBoard({ gameTurns }) {
   return gameBoard;
 }
 
-function deriveWinner({ gameBoard, players }) {
+function deriveWinner(gameBoard, players) {
   let winner;
 
   for (const combination of WINNING_COMBINATIONS) {
